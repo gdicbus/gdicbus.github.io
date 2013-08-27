@@ -1,0 +1,64 @@
+{% include header.html %}
+
+<div class="top-bar"></div>
+
+<div class="pink-wrapper">
+  <div class="container">
+    
+    <div class="header">
+
+      <a class="logo" href="/"><img src="../images/logo-gdic.png" /></a>
+    
+      <ul class="nav">
+        {% if page.title == 'Classes' %}
+          <li><a class="classes" href="../classes/">Classes</a></li>
+        {% else %}
+          <li><a href="../classes/">Classes</a></li>
+        {% endif %}
+      
+        {% if page.title == 'Community' %}
+          <li><a class="community" href="../community/">Community</a></li>
+        {% else %}
+          <li><a href="../community/">Community</a></li>
+        {% endif %}
+      
+        {% if page.title == 'Resources' %}
+          <li><a class="resources" href="../resources/">Resources</a></li>
+        {% else %}
+          <li><a href="../resources/">Resources</a></li>
+        {% endif %}
+      
+        {% if page.title == 'Blog' %}
+          <li><a class="blog" href="http://girldevelopitcbus.tumblr.com/">Blog</a></li>
+        {% else %}
+          <li><a href="http://girldevelopitcbus.tumblr.com/">Blog</a></li>
+        {% endif %}
+      
+        {% if page.title == 'Contact' %}
+          <li><a class="contact" href="../contact/">Contact</a></li>
+        {% else %}
+          <li><a href="../contact/">Contact</a></li>
+        {% endif %}
+      </ul> <!-- /nav -->
+    
+    </div><!-- /header -->
+  </div><!-- /container -->
+</div><!-- /pink-wrapper -->
+
+<div class="white-wrapper">
+  <div class="container">
+      
+    <div class="page-content">
+
+      <h2>{{ page.title }}</h2>
+
+      {{ content }}
+          
+    </div><!-- /page-content -->
+    
+    {% include sidebar.html %}
+      
+  </div><!-- /container -->  
+</div> <!-- /white-wrapper -->
+      
+{% include footer.html %}
